@@ -1,5 +1,6 @@
-import { IExpression } from "../Expression/Expression";
-import { IProcess } from "../Processes/Process";
+import {IExpression} from "../Expression/Expression";
+import {IProcess} from "..";
+
 
 export type data = string | IExpression;
 

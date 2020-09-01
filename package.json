@@ -1,8 +1,8 @@
 {
   "name": "rpn-calculator",
-  "version": "0.0.1",
+  "version": "1.0",
   "description": "revers polish notation calculator",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "tsc && node build/index.js",
     "build": "tsc",
