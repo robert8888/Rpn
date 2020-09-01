@@ -25,9 +25,9 @@ class Expression {
                 return this.that.tokens.some(token => token.type === Token_1.TokenTypes.Variable);
             },
             get funcVarNames() {
-                return this.that.tokens
-                    .filter(token => token.type === Token_1.TokenTypes.Variable)
-                    .map(token => token.name);
+                return [...new Set(this.that.tokens
+                        .filter(token => token.type === Token_1.TokenTypes.Variable)
+                        .map(token => token.name))];
             }
         };
     }

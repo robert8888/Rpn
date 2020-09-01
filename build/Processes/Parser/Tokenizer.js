@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Process_1 = require("../Process");
+const Process_1 = require("../../Process/Process");
 const TokenFactory_1 = __importDefault(require("./tokens/TokenFactory"));
 const ExpressionBuilder_1 = require("../../Expression/ExpressionBuilder");
 const Position_1 = __importDefault(require("./tokens/Position"));

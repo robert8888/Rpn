@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Process_1 = require("../../../Process");
+const Process_1 = require("../../../../Process/Process");
 const Token_1 = require("../../tokens/Token");
 const ExpressionBuilder_1 = require("../../../../Expression/ExpressionBuilder");
 const Validator_1 = require("../Validator");

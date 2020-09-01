@@ -21,10 +21,9 @@ class Validator extends Processor_1.default {
         super();
         this.id = this.constructor.name;
         this.use(new BracketMismatch_1.default());
-        this.use(new BracketMismatch_1.default());
+        this.use(new FunctionArguments_1.default());
         this.use(new EmptyBrackets_1.default());
         this.use(new FunctionBrackets_1.default());
-        this.use(new FunctionArguments_1.default());
         this.use(new ComaPosition_1.default());
         this.use(new ComparisonLimit_1.default());
     }

@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Process_1 = require("../../../Process");
+const Process_1 = require("../../../../Process/Process");
 const Token_1 = require("../../tokens/Token");
 const Bracket_1 = require("../../tokens/special/Bracket");
 const Multiplication_1 = __importDefault(require("../../tokens/operations/Multiplication"));
@@ -31,6 +31,8 @@ class InjectMultiplication extends Process_1.Traceable {
             let next = tokens[i + 1];
             const bracketByBracket = current.type === Token_1.TokenTypes.Bracket && current.variant === Bracket_1.BracketVariant.Close
                 && next.type === Token_1.TokenTypes.Bracket && next.variant === Bracket_1.BracketVariant.Open;
+            const bracketByFunction = current.type === Token_1.TokenTypes.Bracket && current.variant === Bracket_1.BracketVariant.Close
+                && next.type === Token_1.TokenTypes.Function;
             const numberByBracket = [Token_1.TokenTypes.Number, Token_1.TokenTypes.Variable].includes(current.type)
                 && next.type === Token_1.TokenTypes.Bracket && next.variant === Bracket_1.BracketVariant.Open;
             const bracketByNumber = current.type === Token_1.TokenTypes.Bracket && current.variant === Bracket_1.BracketVariant.Close
@@ -40,7 +42,7 @@ class InjectMultiplication extends Process_1.Traceable {
             const numberByFunction = [Token_1.TokenTypes.Number, Token_1.TokenTypes.Variable].includes(current.type) && next.type === Token_1.TokenTypes.Function;
             const numberByNumber = [Token_1.TokenTypes.Number, Token_1.TokenTypes.Variable].includes(current.type)
                 && [Token_1.TokenTypes.Number, Token_1.TokenTypes.Variable].includes(next.type);
-            const test = bracketByBracket || numberByBracket || bracketByNumber ||
+            const test = bracketByBracket || bracketByFunction || numberByBracket || bracketByNumber ||
                 numberByVariable || variableByNumber || numberByFunction || numberByNumber;
             if (test) {
                 positions.push(i + 1 + positions.length);

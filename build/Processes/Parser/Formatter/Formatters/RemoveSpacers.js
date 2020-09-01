@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Process_1 = require("../../../Process");
+const Process_1 = require("../../../../Process/Process");
 const Token_1 = require("../../tokens/Token");
 class ReduceSpacer extends Process_1.Traceable {
     run(input) {

@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Process_1 = require("../../../Process");
+const Process_1 = require("../../../../Process/Process");
 const Abs_1 = __importStar(require("../../tokens/functions/Abs"));
 const ExpressionBuilder_1 = require("../../../../Expression/ExpressionBuilder");
 const Bracket_1 = require("../../tokens/special/Bracket");
