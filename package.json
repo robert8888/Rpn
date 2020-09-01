@@ -22,5 +22,22 @@
   },
   "dependencies": {
     "tslint": "^5.12.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert8888/Rpn.git"
+  },
+  "keywords": [
+    "rpn",
+    "calculator",
+    "rever",
+    "polish",
+    "notation",
+    "matematical",
+    "calcuator"
+  ],
+  "bugs": {
+    "url": "https://github.com/robert8888/Rpn/issues"
+  },
+  "homepage": "https://github.com/robert8888/Rpn#readme"
 }
