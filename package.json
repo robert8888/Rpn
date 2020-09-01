@@ -1,0 +1,26 @@
+{
+  "name": "rpn-calculator",
+  "version": "0.0.1",
+  "description": "revers polish notation calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "build": "tsc",
+    "test": "jest --no-cache",
+    "tsc": "tsc",
+    "dev": "tsc -w"
+  },
+  "author": "robert.kami88@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "jest": "^26.2.2",
+    "node-fetch": "^2.6.0",
+    "ts-jest": "^26.1.4",
+    "tslint": "^5.12.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "tslint": "^5.12.1"
+  }
+}
