@@ -1,5 +1,5 @@
 {
-  "name": "rpn-calc",
+  "name": "rpn-ts",
   "version": "0.0.1",
   "description": "revers polish notation calculator",
   "main": "build/index.js",
