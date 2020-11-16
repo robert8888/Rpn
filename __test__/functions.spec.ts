@@ -20,14 +20,11 @@ const testAll = (tests: Test[]) =>{
     const rpn = new Rpn();
     for(let test of tests){
         const value = rpn.valueOf(test.input);
-        // console.log("computed", value);
-     //    console.log("rpn",  rpn.last.toString())
         expect(value).toBeNull();
         expect(rpn.last.details.isFunction).toBeTruthy();
         let argsLength = (<ArgsRange>test.args).variables?.length || Object.values(test.args[0]).length;
         expect(rpn.last.details.funcVarNames.length).toEqual(argsLength);
         const results = rpn.valuesOf(test.args);
-      //  console.log(results)
         expect(
             results.every((result:number, index) => Math.abs(result - test.values[index]) < 0.1)
         ).toBeTruthy();

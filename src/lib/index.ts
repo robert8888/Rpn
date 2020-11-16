@@ -9,24 +9,23 @@ import FunctionCalculator, {ArgsInput} from "./Processes/FunctionCalculator/Func
 export {default as Processor} from "./Processor/Processor";
 export {IProcess} from "./Process/Process";
 
-export default class Rpn{
+export default class Rpn extends Processor{
     private computes = new Map<string, IExpression>();
     private lastInput: string | undefined;
     private functionCalculator : FunctionCalculator | undefined;
 
-    private processor: IProcessor;
     //if process are not give then it use default configuration
     constructor(processes: IProcess[] = [new Parser(), new Converter(), new Calculator()]) {
-        this.processor = new Processor();
+        super();
         processes.forEach((process: IProces) => {
-            this.processor.use(process)
+            this.use(process)
         })
     }
     //transform input expression string to expression object
     private expression(input: string): IExpression{
         this.lastInput = input;
         if(!this.computes.has(input)){
-            this.computes.set(input, <IExpression>(this.processor.compute(input)))
+            this.computes.set(input, <IExpression>(this.compute(input)))
         }
         return <IExpression>(this.computes.get(input));
     }

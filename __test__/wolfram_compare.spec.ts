@@ -9,8 +9,6 @@ const testAll = async (tests: string[]) => {
         wolframResults.forEach((wolframResult: string, index) => {
             const wolframValue = parseFloat(wolframResult);
             const value = <number>rpn.valueOf(tests[index]);
-            // console.log(rpn.partial[rpn.partial.length - 2].toString());
-             //console.log("value" + <number>value + ", wolfram:" + <number>wolframValue)
             expect(Math.abs(Math.abs(value) - Math.abs(wolframValue))).toBeLessThan(.1);
         })
     });
