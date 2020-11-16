@@ -79,6 +79,6 @@ if(!value && rpn.last.errors){
     //will print 
     // EmptyBracket, Expression contains empty bracket pattern, 2
     // BracketMissmatch, Incorrect sequence of brackets, 10
-    // FunctionArgument, Function power expect to get 2 arguments
+    // FunctionArgument, Function power expect to have 2 arguments
 }
 ```
