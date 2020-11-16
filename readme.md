@@ -71,7 +71,7 @@ if(value === null && rpn.last.details.isFunction){
 import Rpn from "rpn-calculator"
 const rpn = new Rpn();
 
-const value = rpn.valueOf("()[(pow(4)))") // 1
+const value = rpn.valueOf("()[(pow(4)))") 
 if(!value && rpn.last.errors){
     rpn.last.errors.forEach(error =>{
         console.log(error.id, error.message, error.position)
