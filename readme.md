@@ -5,10 +5,12 @@ npm install rpn-calculator
 
 ## usage
 ```javascript
-import {rpn} from rpn-calculator
+import Rpn from "rpn-calculator"
+const rpn = new Rpn();
 
 const value = rpn.valueOf("sin(10ded)^ * cos(10deg)^") // 1
 const value = rpn.valueOf("2x + 3!")//
+
 if(value === null && rpn.last.details.isFunction){
 	const values = rpn.valuesOf([{x: 1}, {x:2}]); // [8, 10]
 }
