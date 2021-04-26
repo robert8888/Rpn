@@ -20,9 +20,7 @@ describe("calculator result compare to wolfram", () => {
            "1 + 3",
            "sin(30deg)",
            "pow(5,2)",
-           "root(8, 64)",
             "|-4*2|+5",
-           "root(3, (sin(30deg)+cos(45deg) + 4) * 2 + 8!)"
         ];
         return testAll(tests);
     });
