@@ -1,6 +1,6 @@
 ##
 ```
-npm install rpn-calculator
+npm install rpn-ts
 ```
 
 ## usage
