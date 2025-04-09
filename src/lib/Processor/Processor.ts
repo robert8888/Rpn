@@ -1,5 +1,5 @@
 import {IExpression} from "../Expression/Expression";
-import {IProcess} from "..";
+import {IProcess} from "../Process/Process";
 
 
 export type data = string | IExpression;

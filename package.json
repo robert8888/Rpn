@@ -2,10 +2,13 @@
   "name": "rpn-ts",
   "version": "0.0.4",
   "description": "revers polish notation calculator",
-  "main": "build/index.js",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
   "scripts": {
     "start": "tsc && node build/index.js",
-    "build": "tsc",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "test": "jest --no-cache",
     "tsc": "tsc",
     "dev": "tsc -w"
@@ -36,6 +39,12 @@
     "matematical",
     "calcuator"
   ],
+  "exports": {
+    ".": {
+      "require": "./build/cjs/index.js",
+      "import":  "./build/esm/index.js"
+    }
+  },
   "bugs": {
     "url": "https://github.com/robert8888/Rpn/issues"
   },
