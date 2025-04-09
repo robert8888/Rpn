@@ -4,7 +4,7 @@ import Converter from "./Processes/Converter/Converter";
 import Calculator from "./Processes/Calculator/Calculator";
 import {IExpression} from "./Expression/Expression";
 import FunctionCalculator, {ArgsInput} from "./Processes/FunctionCalculator/FunctionCalculator";
-
+import type { IProcess } from "./Process/Process";
 
 export {default as Processor} from "./Processor/Processor";
 export {IProcess} from "./Process/Process";
@@ -17,7 +17,7 @@ export default class Rpn extends Processor{
     //if process are not give then it use default configuration
     constructor(processes: IProcess[] = [new Parser(), new Converter(), new Calculator()]) {
         super();
-        processes.forEach((process: IProces) => {
+        processes.forEach((process: IProcess) => {
             this.use(process)
         })
     }

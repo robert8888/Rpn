@@ -1,6 +1,6 @@
 {
   "name": "rpn-ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "revers polish notation calculator",
   "main": "build/index.js",
   "scripts": {
